@@ -30,14 +30,26 @@ document.addEventListener("DOMContentLoaded", (event) => {
     updateIGN(); // Initialize the background colors
 });
 
+function formatHexColor(color) {
+    color = color.replace('#', ''); // Entfernt das `#`, falls vorhanden
+    if (color.length === 6) {
+        return `#${color}`; // Fügt das `#` wieder hinzu
+    } else if (color.length === 3) {
+        // Falls die Farbe in der Kurzform (z.B. `#abc`) angegeben wurde, erweitern
+        return `#${color.split('').map(char => char + char).join('')}`;
+    } else {
+        return '#ffffff'; // Fallback auf weiß, wenn die Länge nicht stimmt
+    }
+}
+
 function updateBg() {
-    const color1 = Cinput1.value.length === 7 ? Cinput1.value : 'transparent';
-    const color2 = Cinput2.value.length === 7 ? Cinput2.value : 'transparent';
-    const color3 = Cinput3.value.length === 7 ? Cinput3.value : 'transparent';
+    const color1 = formatHexColor(Cinput1.value);
+    const color2 = formatHexColor(Cinput2.value);
+    const color3 = formatHexColor(Cinput3.value);
     
-    Cinput1.style.backgroundColor = color1;
-    Cinput2.style.backgroundColor = color2;
-    Cinput3.style.backgroundColor = color3;
+    Cinput1.style.backgroundColor = color1 === '#ffffff' ? 'transparent' : color1;
+    Cinput2.style.backgroundColor = color2 === '#ffffff' ? 'transparent' : color2;
+    Cinput3.style.backgroundColor = color3 === '#ffffff' ? 'transparent' : color3;
 
     updateMiniMessageOutput(color1, color2, color3);
     updateIGN(); // Update when new color
@@ -69,9 +81,9 @@ function updateColorInputs() {
 function updateIGN() {
     PreviewText.innerHTML = "";
     const selectedColorCount = parseInt(colorCountDropdown.value);
-    const color1 = Cinput1.value.length === 7 ? Cinput1.value : '#ffffff';
-    const color2 = selectedColorCount >= 2 && Cinput2.value.length === 7 ? Cinput2.value : color1;
-    const color3 = selectedColorCount === 3 && Cinput3.value.length === 7 ? Cinput3.value : color2;
+    const color1 = formatHexColor(Cinput1.value);
+    const color2 = selectedColorCount >= 2 ? formatHexColor(Cinput2.value) : color1;
+    const color3 = selectedColorCount === 3 ? formatHexColor(Cinput3.value) : color2;
     const IGN = IGNinput.value || 'Nickname';
 
     const gradientColors = getGradientColors([color1, color2, color3], IGN.length);
@@ -103,7 +115,7 @@ function processMiniMessage(miniMessage) {
     if (gradients.length > 0) {
         gradients.forEach((match) => {
             ign += match[3];
-            colorList.push(match[1], match[2]);
+            colorList.push(formatHexColor(match[1]), formatHexColor(match[2]));
         });
 
         // Entferne Duplikate und setze die Farben
@@ -141,7 +153,7 @@ function processMiniMessage(miniMessage) {
     } else if (colors.length > 0) {
         // Wenn kein Gradient erkannt wird, prüfe auf Farbe
         const ign = colors.map(match => match[2]).join('');
-        const color1 = colors[0][1];
+        const color1 = formatHexColor(colors[0][1]);
         
         // Setze die Eingabefelder basierend auf der MiniMessage
         IGNinput.value = ign;
