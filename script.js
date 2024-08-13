@@ -231,11 +231,7 @@ function updateMiniMessageOutput(color1, color2, color3) {
         formattedMessage = `<gradient:${color1}:${color2}>${IGN}</gradient>`;
     }
     else if (colorCountDropdown.value === "3") {
-        const midPoint = Math.floor(IGN.length / 2);
-        const part1 = IGN.substring(0, midPoint);
-        const part2 = IGN.substring(midPoint);
-
-        formattedMessage = `<gradient:${color1}:${color2}>${part1}</gradient><gradient:${color2}:${color3}>${part2}</gradient>`;
+        formattedMessage = `<gradient:${color1}:${color2}:${color3}>${IGN}</gradient>`;
     }
 
     outputField2.value = formattedMessage;
