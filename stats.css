@@ -170,8 +170,7 @@
   padding-bottom: var(--dl-space-space-halfunit);
 }
 .stats-image10 {
-  width: 435px;
-  height: 242px;
+  width: 30%;
   padding: 0px;
   object-fit: cover;
 }
