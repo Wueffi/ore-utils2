@@ -5,5 +5,10 @@ To-Do: \
 ☑ New MiniMessage Output Format \
 ☐ New MiniMessage Input Format \
 ☑ Add # or no # hex support \
-☐ Presets 
-☐ Add ORE Census Results
+☐ Presets \
+# Add ORE Census Results
+\
+☐ Create all StatSites
+☐ Rename Stats to ORE-Census
+☐ Finish
+
