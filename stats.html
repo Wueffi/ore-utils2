@@ -57,6 +57,7 @@
     <link rel="stylesheet" href="./style.css" />
     <div>
       <link href="./index.css" rel="stylesheet" />
+      <link href="./stats.css" rel="stylesheet" />
 
       <div>
         <header class="home-container">
@@ -74,8 +75,8 @@
                 <a href="./maps.html">
                   <fragment><span class="home-text05 thq-body-small thq-link">Maps</span></fragment>
                 </a>
-                <a href="./stats.html">
-                  <fragment><span class="home-text05 thq-body-small thq-link">Stats</span></fragment>
+                <a href="./test.html">
+                  <fragment><span class="home-text05 thq-body-small thq-link">Test</span></fragment>
                 </a>
                 <a href="./about.html">
                   <fragment>
@@ -136,113 +137,213 @@
             </div>
           </header>
         </header>
-        <h1 class="home-text08" style="text-align: center">NICKNAME GRADIENT GENERATOR</h1>
-        <h5 class="home-text09" style="text-align: center">Made by Waffle</h5>
-        <br>
-        <div class="home-container1">
-          <div class="home-inputs">
-            <div class="home-input-ign">
-              <span class="home-text10">
-                <span>Your IGN</span>
-                <br />
-              </span>
-              <input
-                type="text"
-                id="input"
-                name="input"
-                placeholder="Nickname"
-                class="home-input input"
-                oninput="updateIGN()"
-                maxlength="16"
-              />
-            </div>
-            <div class="home-color-inputs">
-              <span class="home-text13">Your Nickname Gradient Colors</span>
-              <span class="home-text14">
-                <span>Only Hex-Colors supported.</span>
-                <br />
-                <span>Format: #abcdef</span>
-              </span>
-              <button id="import" type="button" class="home-button button">
-                Import MiniMessage
-              </button>
-                <!-- Dropdown zur Auswahl der Anzahl der Farben -->
-              <span class="home-text18">Number of Colors:</span>
-              <select id="colorCount" name="colorCount" class="dropdown" onchange="updateColorInputs()">
-                <option value="1">1 Color</option>
-                <option value="2">2 Colors</option>
-                <option value="3" selected>3 Colors</option>
-              </select>
-              <span class="home-text18">
-                <span>Color #1</span>
-                <br />
-              </span>
-              <input
-                type="text"
-                id="Cinput1"
-                name="Cinput1"
-                required="true"
-                placeholder="Hex-Colorcode"
-                class="home-textinput input"
-                maxlength="7"
-                oninput="updateBg()"
-              />
-              <span id="Cinput2label" class="home-text21">
-                <span>Color #2</span>
-                <br />
-              </span>
-              <input
-                type="text"
-                id="Cinput2"
-                name="Cinput2"
-                placeholder="Hex-Colorcode"
-                class="home-textinput1 input"
-                maxlength="7"
-                oninput="updateBg()"
-              />
-              <span id="Cinput3label" class="home-text24">
-                <span>Color #3</span>
-                <br />
-              </span>
-              <input
-                type="text"
-                id="Cinput3"
-                name="Cinput3"
-                placeholder="Hex-Colorcode"
-                class="home-textinput2 input"
-                maxlength="7"
-                oninput="updateBg()"
-              />
+        </navbar1-wrapper>
+        <h1 class="stats-text18" style="text-align: center">ORE CENSUS RESULTS</h1>
+        <h5 class="stats-text19" style="text-align: center">
+          <span>From Fandit's Poll</span>
+          <br />
+          <span>Made by Waffle</span>
+          <br />
+          <br />
+          <span>(Click Images to change Chart-Type.)</span>
+          <br />
+        </h5>
+          <div class="stats-container2">
+            <div class="stats-stats">
+              <div class="stats-aspect-link10">
+                <a href="./Stats/Sites/gender.html">
+                <span class="stats-text27">Gender</span>
+                <img
+                  src="./Stats/Images/gender.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link11">
+                <span class="stats-text28">LGBTQ+</span>
+                <img
+                  src="./Stats/Images/lgbtq.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link12">
+                <span class="stats-text29">World Map</span>
+                <img
+                  src="./Stats/Images/Map.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link13">
+                <span class="stats-text30">Education Level</span>
+                <img
+                  src="./Stats/Images/education.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link14">
+                <span class="stats-text31">ALU</span>
+                <img
+                  src="./Stats/Images/alu.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link14">
+                <span class="stats-text31">ALU Type</span>
+                <img
+                  src="./Stats/Images/alutype.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link15">
+                <span class="stats-text32">CPU</span>
+                <img
+                  src="./Stats/Images/cpu1.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>             
+               <div class="stats-aspect-link15">
+                <span class="stats-text32">CPU Pipelined</span>
+                <img
+                  src="./Stats/Images/pipelined.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link17">
+                <span class="stats-text34">Time Zone</span>
+                <img
+                  src="./Stats/Images/TimeZone.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link18">
+                <span class="stats-text35">Age</span>
+                <img
+                  src="./Stats/Images/age.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link19">
+                <span class="stats-text36">Race</span>
+                <img
+                  src="./Stats/Images/race.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link20">
+                <span class="stats-text37">Rank</span>
+                <img
+                  src="./Stats/Images/rank.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link21">
+                <span class="stats-text38">Discord</span>
+                <img
+                  src="./Stats/Images/linked.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link22">
+                <span class="stats-text39">Learn Effects</span>
+                <img
+                  src="./Stats/Images/.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link23">
+                <span class="stats-text40">Questions & Help</span>
+                <img
+                  src="./Stats/Images/help.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link24">
+                <span class="stats-text41">Friends</span>
+                <img
+                  src="./Stats/Images/friends.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link25">
+                <span class="stats-text42">Social Enviroment</span>
+                <img
+                  src="./Stats/Images/Socials.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link26">
+                <span class="stats-text43">Native Language</span>
+                <img
+                  src="./Stats/Images/lang.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link27">
+                <span class="stats-text44">Job</span>
+                <img
+                  src="./Stats/Images/job.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link28">
+                <span class="stats-text45">Outside of ORE</span>
+                <img
+                  src="./Stats/Images/ooo.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
+              <div class="stats-aspect-link29">
+                <span class="stats-text46">BAM CAPO!!!</span>
+                <img
+                  src="./Stats/Images/bancapo.webp"
+                  alt="image"
+                  class="stats-image10"
+                  title="View"
+                />
+              </div>
             </div>
           </div>
-          <div class="home-output">
-            <div class="home-preview">
-              <span class="home-text27">Preview:</span>
-              <h1 id="preview">NICKNAME</h1>
-            </div>
-            <div class="home-output1">
-              <span class="home-text29">Output:</span>
-              <span class="home-text30">Command for setting the colors</span>
-              <textarea
-                id="output1"
-                placeholder="/nick color #abcdef #abcdef #abcdef"
-                class="home-textarea textarea"
-              ></textarea>
-            </div>
-            <div class="home-output-2">
-              <span class="home-text31">
-                MiniMessage for sharing in gamechat
-              </span>
-              <textarea
-                id="output2"
-                placeholder="<b><gradient:#abcdef:#abcdef> Nickname </gradient> </b>"
-                class="home-textarea1 textarea"
-              ></textarea>
-            </div>
-          </div>
-        </div>
         <br>
-        <footer class="footer3-footer4 thq-section-padding">
+        <footer class="footer footer3-footer4 thq-section-padding">
           <div class="footer3-max-width thq-section-max-width">
             <div class="footer3-content">
               <div class="footer3-links2">
@@ -259,6 +360,7 @@
                 </a>
                 <a
                   href="./maps.html"
+                  
                   rel="noreferrer noopener"
                 >
                   <fragment>
@@ -267,6 +369,7 @@
                 </a>
                 <a
                   href="./about.html"
+                  
                   rel="noreferrer noopener"
                 >
                   <fragment>
