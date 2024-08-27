@@ -8,7 +8,7 @@ To-Do: \
 ☐ Presets \
 # Add ORE Census Results
 \
-☐ Create all StatSites
-☐ Rename Stats to ORE-Census
+☐ Create all StatSites \
+☐ Rename Stats to ORE-Census \
 ☐ Finish
 
